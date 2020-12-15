@@ -11,7 +11,7 @@ class PayPalBtn extends React.Component {
 				currency={currency}
 				onSuccess={(details, data) => onSuccess(details, data)}
 				options={{
-					clientId: 'AXN0a3aP3GKRbWEsSbGl5iSNWVyutjMa_kjLKCMrqmPEOqEtvNOEuOE1qS3ElW53VaZrCwGBI6-cV5YW',
+					clientId: `${process.env.REACT_APP_MY_KEY}`,
 				}}
 			/>
 		);

@@ -9,7 +9,6 @@ function Home({ products, handleAddToCart, cartCount, handleRemoveFromCart }) {
     <div className="container">
       <header>
         <div className='header-content'>
-
         <h3 className="logo">Shop Trendy</h3>
         <nav>
           <img src={cart} alt="cart-icon" className="cart-icon" />
@@ -18,9 +17,9 @@ function Home({ products, handleAddToCart, cartCount, handleRemoveFromCart }) {
             <Link to="/cart">Cart</Link>
           </Button>
         </nav>
-        
         </div>
-       
+        
+      
       </header>
 
       <div className="products-container">

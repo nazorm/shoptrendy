@@ -34,8 +34,6 @@ header{
 	margin: 0 auto 0;
 	justify-content: space-between;
 	align-items: center;
-	
-
 }
 .logo{
 	font-size: 20px;
@@ -64,9 +62,15 @@ align-self: center;
 	}
 	.products-container{
 		width: 90%;
-		margin: 50px auto ;
+		margin: 140px auto ;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		grid-gap: 18px;
+	}
+	.header-content{
+		padding: 10px 0;
+	}
+	.logo{
+		font-size: 20px;
 	}
 }

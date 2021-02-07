@@ -9,7 +9,7 @@ function App() {
   const [trendyProducts, setTrendyProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [trendyCartProducts, setTrendyCartProducts]=useState([])
-  const [cartCounter, setCartCounter] = (0)
+  const [cartCounter, setCartCounter] = useState(0)
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -28,13 +28,15 @@ const handleAddToCart=(index)=>{
  })
  const cartItems = [...trendyCartProducts, cartP]
  setTrendyCartProducts(cartItems)
- setCartCounter(prevCount=> prevCount+1)
+setCartCounter(prevCount=> prevCount+1)
+ 
 }
 const handleRemoveFromCart=(index)=>{
   const filteredCart = trendyCartProducts.filter((d)=>{
     return d.id !== index
   })
   setTrendyCartProducts(filteredCart)
+  setCartCounter(prevCount=> prevCount-1)
 }
 
   return (
@@ -46,7 +48,8 @@ const handleRemoveFromCart=(index)=>{
 		  <Home 
       products={trendyProducts} 
       handleAddToCart={handleAddToCart}
-      cartCounter={cartCounter}
+      handleRemoveFromCart={handleRemoveFromCart}
+      cartCount={cartCounter}
 		  />
 		  }
         </Route>
@@ -54,6 +57,7 @@ const handleRemoveFromCart=(index)=>{
           <Cart
           cartProducts = {trendyCartProducts}
           handleRemoveFromCart={handleRemoveFromCart}
+          cartCount={cartCounter}
           
           />
         </Route>

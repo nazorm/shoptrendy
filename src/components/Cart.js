@@ -4,13 +4,13 @@ import "../App.css";
 import cart from "./cart.svg";
 import { Link } from "react-router-dom";
 
-function Cart({ cartProducts, handleRemoveFromCart, cartCount }) {
+function Cart({ cartProducts, handleRemoveFromCart, cartCount}) {
   console.log(cartProducts);
   return (
     <div className="container">
       <header>
-          <div className='header-content'>
-          <h3 className="logo">Shop Trendy</h3>
+      <div className='header-content'>
+      <h3 className="logo">Shop Trendy</h3>
         <nav>
           <img src={cart} alt="cart-icon" className="cart-icon" />
           <span className="cart-counter">{cartCount}</span>
@@ -18,7 +18,7 @@ function Cart({ cartProducts, handleRemoveFromCart, cartCount }) {
             <Link to="/">Home</Link>
           </Button>
         </nav>
-          </div>
+</div>
        
       </header>
       <div className="products-container">

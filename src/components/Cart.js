@@ -9,7 +9,8 @@ function Cart({ cartProducts, handleRemoveFromCart, cartCount }) {
   return (
     <div className="container">
       <header>
-        <h3 className="logo">Shop Trendy</h3>
+          <div className='header-content'>
+          <h3 className="logo">Shop Trendy</h3>
         <nav>
           <img src={cart} alt="cart-icon" className="cart-icon" />
           <span className="cart-counter">{cartCount}</span>
@@ -17,6 +18,8 @@ function Cart({ cartProducts, handleRemoveFromCart, cartCount }) {
             <Link to="/">Home</Link>
           </Button>
         </nav>
+          </div>
+       
       </header>
       <div className="products-container">
         {cartProducts.map((d) => {

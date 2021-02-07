@@ -1,4 +1,9 @@
 @import 'antd/dist/antd.css';
+
+
+.container{
+
+}
 .product-image{
 	width: 100%;
 }
@@ -15,13 +20,21 @@
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	width: 100%;
 }
+Link{
+	color: white;
+}
 header{
 	display: flex;
 	width: 90%;
-	margin: 20px auto 0;
+	z-index: 100;
+	position: fixed;
+	margin: 0 auto 0;
 	justify-content: space-between;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	align-items: center;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 
 }
 .logo{
@@ -31,7 +44,7 @@ header{
 .cart-counter{
 	font-size: 10px;
 	align-self: end;
-	margin-right: 5px;
+	margin: 0 5px 0 2px;
 }
 .cart-icon{
 width: 15px;

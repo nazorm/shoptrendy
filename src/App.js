@@ -38,7 +38,10 @@ const handleRemoveFromCart=(index)=>{
   setTrendyCartProducts(filteredCart)
   setCartCounter(prevCount=> prevCount-1)
 }
-
+const emptyCart=()=>{
+  setCartCounter(0)
+  setTrendyCartProducts([])
+}
   return (
     <Router>
       <Switch>
@@ -58,6 +61,7 @@ const handleRemoveFromCart=(index)=>{
           cartProducts = {trendyCartProducts}
           handleRemoveFromCart={handleRemoveFromCart}
           cartCount={cartCounter}
+          emptyCart ={emptyCart}
           
           />
         </Route>

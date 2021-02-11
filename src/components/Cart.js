@@ -4,7 +4,7 @@ import "../App.css";
 import cart from "./cart.svg";
 import { Link } from "react-router-dom";
 
-function Cart({ cartProducts, handleRemoveFromCart, cartCount}) {
+function Cart({ cartProducts, handleRemoveFromCart, cartCount, emptyCart}) {
   console.log(cartProducts);
   return (
     <div className="container">
@@ -14,6 +14,7 @@ function Cart({ cartProducts, handleRemoveFromCart, cartCount}) {
         <nav>
           <img src={cart} alt="cart-icon" className="cart-icon" />
           <span className="cart-counter">{cartCount}</span>
+          <Button onClick={()=>{emptyCart()}} className='emptycart-btn'>Empty Cart</Button>
           <Button type="primary" className="directionBtn goHome">
             <Link to="/">Home</Link>
           </Button>

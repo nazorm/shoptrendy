@@ -18,8 +18,6 @@ function Home({ products, handleAddToCart, cartCount, handleRemoveFromCart }) {
           </Button>
         </nav>
         </div>
-        
-      
       </header>
 
       <div className="products-container">
@@ -27,13 +25,14 @@ function Home({ products, handleAddToCart, cartCount, handleRemoveFromCart }) {
           return (
             <div key={d.id} className="product">
               <img src={d.image} alt="productImage" className="product-image" />
-              <h5 className="product-title-category">
+              <br/>
+              <br/>
+              <h5 className="product-title">
                 {d.title}
-                <br />
-                <br />
-                {d.category}
               </h5>
-              <br />
+              <p className="product-category">
+              {d.category}
+              </p>
               <span>Price: ${d.price}</span>
               <br />
               <Button
